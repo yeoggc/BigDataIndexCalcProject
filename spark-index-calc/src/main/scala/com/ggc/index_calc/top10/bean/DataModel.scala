@@ -36,3 +36,12 @@ case class CategoryCountInfo(categoryId: String,
                              orderCount: Long,
                              payCount: Long)
 
+case class CategorySession(categoryId: String,
+                           sessionId: String,
+                           clickCount: Long) extends Ordered[CategorySession] {
+  // 降序排列
+  override def compare(that: CategorySession): Int = {
+    if (this.clickCount <= that.clickCount) 1
+    else -1
+  }
+}
