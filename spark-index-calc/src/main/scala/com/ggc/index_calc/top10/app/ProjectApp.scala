@@ -20,14 +20,29 @@ object ProjectApp extends App {
       splits(6).toLong, splits(7).toLong, splits(8), splits(9), splits(10), splits(11), splits(12).toLong)
   })
 
-  //  val means1Result = CategoryTop10App.statCategoryTop10_Means1(sc, userVisitActionRDD)
-  //  means1Result.foreach(println)
+  var categoryTop10Result = CategoryTop10App.statCategoryTop10_Means1(sc, userVisitActionRDD)
+  //  categoryTop10Result.foreach(println)
   //  println("------------------------------")
-  //  val means2Result = CategoryTop10App.statCategoryTop10_Means2(sc, userVisitActionRDD)
-  //  means2Result.foreach(println)
+  //  categoryTop10Result = CategoryTop10App.statCategoryTop10_Means2(sc, userVisitActionRDD)
+  //  categoryTop10Result.foreach(println)
   //  println("------------------------------")
-  val means3Result = CategoryTop10App.statCategoryTop10_Means3(sc, userVisitActionRDD)
-  means3Result.foreach(println)
+  //  categoryTop10Result = CategoryTop10App.statCategoryTop10_Means3(sc, userVisitActionRDD)
+  //  categoryTop10Result.foreach(println)
+  //  println("------------------------------")
 
+
+//  var top10SessionBaseOnTop10CategoryRDD = Top10SessionBaseOnTop10CategoryApp.statCategoryTop10Session_Means1(sc, categoryTop10Result,userVisitActionRDD)
+//  top10SessionBaseOnTop10CategoryRDD.collect.foreach(println)
+
+  //  top10SessionBaseOnTop10CategoryRDD = Top10SessionBaseOnTop10CategoryApp.statCategoryTop10Session_Means2(sc, categoryTop10Result,userVisitActionRDD)
+  //  top10SessionBaseOnTop10CategoryRDD.collect.foreach(println)
+
+//  val  top10SessionBaseOnTop10CategoryResult =  Top10SessionBaseOnTop10CategoryApp.statCategoryTop10Session_Means3(sc, categoryTop10Result,userVisitActionRDD)
+//  top10SessionBaseOnTop10CategoryResult.foreach(println)
+
+  val  categorySessionRDD =  Top10SessionBaseOnTop10CategoryApp.statCategoryTop10Session_Means4(sc, categoryTop10Result,userVisitActionRDD)
+  categorySessionRDD.foreach(println)
+
+  sc.stop()
 
 }
