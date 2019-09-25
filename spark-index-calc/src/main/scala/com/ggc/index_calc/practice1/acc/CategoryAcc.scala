@@ -1,6 +1,6 @@
-package com.ggc.index_calc.top10.acc
+package com.ggc.index_calc.practice1.acc
 
-import com.ggc.index_calc.top10.bean.UserVisitAction
+import com.ggc.index_calc.practice1.bean.UserVisitAction
 import org.apache.spark.util.AccumulatorV2
 
 import scala.collection.immutable.HashMap
