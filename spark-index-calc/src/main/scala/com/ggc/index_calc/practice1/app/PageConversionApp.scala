@@ -1,8 +1,8 @@
-package com.ggc.index_calc.top10.app
+package com.ggc.index_calc.practice1.app
 
 import java.text.DecimalFormat
 
-import com.ggc.index_calc.top10.bean.UserVisitAction
+import com.ggc.index_calc.practice1.bean.UserVisitAction
 import org.apache.spark.SparkContext
 import org.apache.spark.rdd.RDD
 

@@ -1,6 +1,6 @@
-package com.ggc.index_calc.top10.app
+package com.ggc.index_calc.practice1.app
 
-import com.ggc.index_calc.top10.bean.{CategoryCountInfo, CategorySession, UserVisitAction}
+import com.ggc.index_calc.practice1.bean.{CategoryCountInfo, CategorySession, UserVisitAction}
 import org.apache.spark.rdd.RDD
 import org.apache.spark.{Partitioner, SparkContext}
 

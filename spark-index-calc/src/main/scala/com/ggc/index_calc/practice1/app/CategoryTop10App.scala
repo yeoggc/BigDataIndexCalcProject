@@ -1,7 +1,7 @@
-package com.ggc.index_calc.top10.app
+package com.ggc.index_calc.practice1.app
 
-import com.ggc.index_calc.top10.acc.CategoryAcc
-import com.ggc.index_calc.top10.bean.{CategoryCountInfo, UserVisitAction}
+import com.ggc.index_calc.practice1.acc.CategoryAcc
+import com.ggc.index_calc.practice1.bean.{CategoryCountInfo, UserVisitAction}
 import org.apache.spark.SparkContext
 import org.apache.spark.rdd.RDD
 

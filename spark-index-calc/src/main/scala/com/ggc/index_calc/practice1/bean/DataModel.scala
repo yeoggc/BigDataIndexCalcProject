@@ -1,4 +1,4 @@
-package com.ggc.index_calc.top10.bean
+package com.ggc.index_calc.practice1.bean
 
 /**
  * 用户访问动作表
