@@ -6,7 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="spark-index-calc" />
+        <module name="mock-data" />
+        <module name="SparkBatchProcessProject" />
+        <module name="spark-streaming-project" />
+        <module name="spark-realtime" />
+        <module name="structured-streaming-project" />
       </profile>
     </annotationProcessing>
   </component>

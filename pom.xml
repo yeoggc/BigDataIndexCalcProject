@@ -9,7 +9,8 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>spark-index-calc</module>
+        <module>SparkBatchProcessProject</module>
+        <module>SparkRealtimeProcessProject</module>
     </modules>
     <dependencies>
         <dependency>
