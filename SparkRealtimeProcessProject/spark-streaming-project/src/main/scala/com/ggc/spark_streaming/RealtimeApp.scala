@@ -4,7 +4,7 @@ import java.sql.Timestamp
 import java.text.SimpleDateFormat
 import java.util.Date
 
-import com.ggc.spark_streaming.app.AreaAdsClickTop3
+import com.ggc.spark_streaming.app.{AreaAdsClickTop3, LastHourAdsClickApp}
 import com.ggc.spark_streaming.bean.AdsInfo
 import com.ggc.spark_streaming.util.MyKafkaUtil
 import org.apache.spark.SparkConf
@@ -25,6 +25,7 @@ object RealtimeApp extends App {
     MyKafkaUtil.getKafkaStream(ssc, "ads_log")
       .map(record => { // 1569572798366,华南,深圳,101,2
 
+
         val arr = record.value().split(",")
         val date = new Date(arr(0).toLong)
         AdsInfo(
@@ -42,9 +43,10 @@ object RealtimeApp extends App {
 //  adsInfoDStream.print()
 
   // 1. 需求1: 每天每地区热门广告 Top3
-  AreaAdsClickTop3.statHotAdsClick4PerDayArea(adsInfoDStream)
+//  AreaAdsClickTop3.statHotAdsClick4PerDayArea(adsInfoDStream)
 
   // 2. 需求2: 最近 1 小时广告点击量实时统计
+  LastHourAdsClickApp.statLastHourClick(adsInfoDStream)
 
   ssc.start()
   ssc.awaitTermination()
