@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ScalaCompilerConfiguration">
-    <profile name="Maven 1" modules="BigDataIndexCalcProject,SparkBatchProcessProject,mock-data,spark-index-calc,spark-realtime,spark-streaming-project,structured-streaming-project" />
+    <profile name="Maven 1" modules="BigDataIndexCalcProject,FlinkRealtimeProcessProject,SparkBatchProcessProject,mock-data,spark-index-calc,spark-realtime,spark-streaming-project,structured-streaming-project" />
   </component>
 </project>

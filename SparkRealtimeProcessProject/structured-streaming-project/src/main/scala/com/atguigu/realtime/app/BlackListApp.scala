@@ -22,9 +22,9 @@ object BlackListApp {
           val adsInfoList: List[AdsInfo] = it.toList
           val client: Jedis = RedisUtil.getJedisClient
           // 黑名单
-          val blacList: util.Set[String] = client.smembers(s"blacklist:${adsInfoList.head.dayString}")
+          val blackList: util.Set[String] = client.smembers(s"blacklist:${adsInfoList.head.dayString}")
           // 过滤
-          adsInfoList.filter(adsInfo => !blacList.contains(adsInfo.userId)).toIterator
+          adsInfoList.filter(adsInfo => !blackList.contains(adsInfo.userId)).toIterator
         })
 
     // 2. 重新统计黑名单(已经进入黑名单的不会重新计算)

@@ -11,6 +11,7 @@
     <modules>
         <module>SparkBatchProcessProject</module>
         <module>SparkRealtimeProcessProject</module>
+        <module>FlinkRealtimeProcessProject</module>
     </modules>
     <dependencies>
 
